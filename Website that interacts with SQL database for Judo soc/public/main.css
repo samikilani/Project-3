@@ -1,0 +1,140 @@
+body {
+  font-family: "Karla", sans-serif;
+  background-color: #f4f7fa;
+}
+
+.content {
+  max-width: 1800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #005a9c; 
+}
+
+.dash_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin: 0 auto;
+}
+
+.dash_items .card {
+  background-color: #ffffff;
+  border: 2px solid #005a9c; 
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.dash_items a {
+  color: #333; 
+  text-decoration: none;
+}
+
+.dash_items .card:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); 
+}
+
+
+.data th,
+.data td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.data th {
+  background-color: #333;
+  color: #fff;
+}
+
+.data tr:nth-child(even) {
+  background-color: #e9ecef; 
+}
+
+.data tr:hover {
+  background-color: #ddd;
+}
+
+.breadcrumbs {
+  margin: 1rem auto;
+  max-width: 1000px;
+}
+
+.breadcrumbs li {
+  display: inline;
+  list-style: lower-greek;
+  margin-right: 0.5rem;
+}
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.newButton {
+  background-color: #005a9c; 
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+.newButton:hover {
+  background-color: #004080;
+}
+
+.dataTable {
+  padding: 0 25%;
+}
+
+.edit_form {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 1rem;
+}
+.dashboard-logo {
+  max-width: 100px; 
+  height: auto; 
+  display: block;
+  margin: 0 auto; 
+}
+ /*Joe Appleton css template */
