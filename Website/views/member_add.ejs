@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Add Member</title>
+</head>
+<body>
+    <div class="content">
+        <h1>Add New Member</h1>
+
+        <form method="post" action="/members/add">
+            <p>
+                <label for="Student_ID">Select Student:</label>
+                <select id="Student_ID" name="Student_ID" required>
+                    <% students.forEach(student => { %>
+                        <option value="<%= student.URN %>">
+                            <%= student.Stu_FName %> <%= student.Stu_LName %> (URN: <%= student.URN %>)
+                        </option>
+                    <% }); %>
+                </select>
+            </p>
+            <p>
+                <label for="Team_ID">Select Team:</label>
+                <select id="Team_ID" name="Team_ID" required>
+                    <% teams.forEach(team => { %>
+                        <option value="<%= team.Team_ID %>">
+                            <%= team.Team_Name %>
+                        </option>
+                    <% }); %>
+                </select>
+            </p>
+            <p>
+                <label for="Date_Joined">Date Joined:</label>
+                <input type="date" id="Date_Joined" name="Date_Joined" required>
+            </p>
+            <p>
+                <label for="Belt_Rank">Belt Rank:</label>
+                <select id="Belt_Rank" name="Belt_Rank" required>
+                    <option value="White">White</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Green">Green</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Brown">Brown</option>
+                    <option value="Black">Black</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Add Member">
+            </p>
+        </form>
+
+        <% if (typeof message !== 'undefined' && message) { %>
+            <p><%= message %></p>
+        <% } %>
+    </div>
+</body>
+</html>

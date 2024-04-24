@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Members</title>
+</head>
+<body>
+    <div class="content">
+        <ul class="breadcrumbs">
+            <li> <a href="/"> Dashboard</a> </li>
+            <li> / </li>
+            <li> Members </li>
+        </ul>
+        <h1> Members </h1>
+
+        
+        <form method="get" action="/members/search">
+            <input type="text" name="searchTerm" placeholder="Search Members">
+            <input type="submit" value="Search">
+        </form>
+
+       
+        <p>
+            <a href="/members/add">Add New Member</a>
+        </p>
+
+        <section class="dataTable">
+            <table class="data">
+                <tr>
+                    <th>Member ID</th>
+                    <th>Name</th>
+                    <th>Date Joined</th>
+                    <th>Belt Rank</th>
+                    <th>Actions</th>
+                </tr>
+                <% members.forEach(member => { %>
+                <tr>
+                    <td><%- member.Membership_ID %></td>
+                    <td><%- member.Stu_FName %> <%- member.Stu_LName %></td>
+                    <td><%- member.Date_Joined %></td>
+                    <td><%- member.Belt_Rank %></td>
+                    <td>
+                        <a href="/members/view/<%- member.Membership_ID %>">View</a>
+                        | 
+                        <a href="/members/edit/<%- member.Membership_ID %>">Edit</a>
+                        | 
+                        <a href="/members/delete/<%- member.Membership_ID %>" onclick="return confirm('Are you sure you want to delete this member?');">Delete</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
